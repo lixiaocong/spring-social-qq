@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.georges.social.qq.connect;
+package com.lixiaocong.social.qq.connect;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import java.util.Map;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.FormHttpMessageConverter;
 import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.social.oauth2.AccessGrant;
 import org.springframework.social.oauth2.OAuth2Template;
 import org.springframework.social.support.ClientHttpRequestFactorySelector;
@@ -30,6 +30,7 @@ public class QQOAuth2Template extends OAuth2Template {
 	public QQOAuth2Template(String clientId, String clientSecret,
 			String authorizeUrl, String accessTokenUrl) {
 		super(clientId, clientSecret, authorizeUrl, accessTokenUrl);
+		setUseParametersForClientAuthentication(true);
 	}
 
 	/* (non-Javadoc)
@@ -49,7 +50,7 @@ public class QQOAuth2Template extends OAuth2Template {
 		
 		converters.add(formConverter);
 		
-		MappingJacksonHttpMessageConverter jacksonConverter = new MappingJacksonHttpMessageConverter();
+		MappingJackson2HttpMessageConverter jacksonConverter = new MappingJackson2HttpMessageConverter();
 		
 		List<MediaType> list2 = new ArrayList<MediaType>();
 		list2.addAll(jacksonConverter.getSupportedMediaTypes());
@@ -72,7 +73,7 @@ public class QQOAuth2Template extends OAuth2Template {
 		String accessToken=(String)result.getFirst("access_token");
 		String scope=(String) result.getFirst("scope");
 		String refreshToken=(String) result.getFirst("refresh_token");
-		Integer expiresIn=Integer.parseInt((String) result.getFirst("expires_in"));
+		Long expiresIn=Long.parseLong((String) result.getFirst("expires_in"));
 
 		AccessGrant ag = new AccessGrant(accessToken, scope, refreshToken, expiresIn);
 		//A bug in AccessGrant which cause Integer overflow, fix it here

@@ -1,4 +1,4 @@
-package com.georges.social.qq.api;
+package com.lixiaocong.social.qq.api;
 
 public interface UserOperations {
 

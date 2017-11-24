@@ -1,9 +1,9 @@
-package com.georges.social.qq.connect;
+package com.lixiaocong.social.qq.connect;
 
+import com.lixiaocong.social.qq.api.impl.QQTemplate;
 import org.springframework.social.oauth2.AbstractOAuth2ServiceProvider;
 
-import com.georges.social.qq.api.QQ;
-import com.georges.social.qq.api.impl.QQTemplate;
+import com.lixiaocong.social.qq.api.QQ;
 
 public class QQServiceProvider extends AbstractOAuth2ServiceProvider<QQ> {
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.georges.social.qq.api.impl;
+package com.lixiaocong.social.qq.api.impl;
 
 import java.net.URI;
 
@@ -12,7 +12,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
-import com.georges.social.qq.api.QQ;
+import com.lixiaocong.social.qq.api.QQ;
 
 /**
  * @author alexzuo
@@ -34,7 +34,7 @@ public class AbstractQQOperations extends AbstractOAuth2ApiBinding {
 	
 	protected void requireAuthorization() {
 		if (!isAuthorized) {
-			throw new MissingAuthorizationException();
+			throw new MissingAuthorizationException("qq");
 		}
 	}
 	

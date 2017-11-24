@@ -1,17 +1,15 @@
-package com.georges.social.qq.api.impl;
+package com.lixiaocong.social.qq.api.impl;
 
 import java.lang.reflect.Field;
 
-import org.codehaus.jackson.JsonNode;
-import org.springframework.social.oauth2.AccessGrant;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.web.client.RestTemplate;
 
-import com.georges.social.qq.api.QQ;
-import com.georges.social.qq.api.QQProfile;
-import com.georges.social.qq.api.UserOperations;
+import com.lixiaocong.social.qq.api.QQ;
+import com.lixiaocong.social.qq.api.QQProfile;
+import com.lixiaocong.social.qq.api.UserOperations;
 /**
  * @author alexzuo
  * 

@@ -1,16 +1,15 @@
 /**
  * 
  */
-package com.georges.social.qq.api.impl;
+package com.lixiaocong.social.qq.api.impl;
 
 import java.io.Serializable;
 import java.util.List;
 
-import org.codehaus.jackson.annotate.JsonCreator;
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-import org.codehaus.jackson.annotate.JsonProperty;
-
-import com.georges.social.qq.api.QQProfile;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.lixiaocong.social.qq.api.QQProfile;
 
 /**
  * @author alexzuo

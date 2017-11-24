@@ -1,5 +1,5 @@
 
-package com.georges.social.qq.api;
+package com.lixiaocong.social.qq.api;
 import java.io.Serializable;
 
 import org.springframework.social.connect.UserProfile;

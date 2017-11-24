@@ -1,15 +1,15 @@
 /**
  * 
  */
-package com.georges.social.qq.connect;
+package com.lixiaocong.social.qq.connect;
 
 import org.springframework.social.connect.ApiAdapter;
 import org.springframework.social.connect.ConnectionValues;
 import org.springframework.social.connect.UserProfile;
 import org.springframework.social.connect.UserProfileBuilder;
 
-import com.georges.social.qq.api.QQ;
-import com.georges.social.qq.api.QQProfile;
+import com.lixiaocong.social.qq.api.QQ;
+import com.lixiaocong.social.qq.api.QQProfile;
 
 /**
  * @author alexzuo

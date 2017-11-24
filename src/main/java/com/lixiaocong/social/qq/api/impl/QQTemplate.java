@@ -1,24 +1,19 @@
 /**
  * 
  */
-package com.georges.social.qq.api.impl;
+package com.lixiaocong.social.qq.api.impl;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lixiaocong.social.qq.api.QQ;
+import com.lixiaocong.social.qq.api.UserOperations;
+import com.lixiaocong.social.qq.api.impl.json.QQModule;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.social.oauth2.AbstractOAuth2ApiBinding;
 
 import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-
-import org.apache.commons.lang.CharSet;
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.springframework.http.MediaType;
-import org.springframework.http.client.ClientHttpRequestInterceptor;
-import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
-import org.springframework.social.oauth2.AbstractOAuth2ApiBinding;
-
-import com.georges.social.qq.api.QQ;
-import com.georges.social.qq.api.UserOperations;
-import com.georges.social.qq.api.impl.json.QQModule;
 
 public class QQTemplate extends AbstractOAuth2ApiBinding implements QQ {
 	
@@ -61,8 +56,8 @@ public class QQTemplate extends AbstractOAuth2ApiBinding implements QQ {
 	}
 
 	@Override
-	protected MappingJacksonHttpMessageConverter getJsonMessageConverter() {
-		MappingJacksonHttpMessageConverter converter = super
+	protected MappingJackson2HttpMessageConverter getJsonMessageConverter() {
+		MappingJackson2HttpMessageConverter converter = super
 				.getJsonMessageConverter();
 		List<MediaType> list = new ArrayList<MediaType>();
 		list.addAll(converter.getSupportedMediaTypes());

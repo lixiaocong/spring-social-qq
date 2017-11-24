@@ -1,11 +1,11 @@
 /**
  * 
  */
-package com.georges.social.qq.connect;
+package com.lixiaocong.social.qq.connect;
 
 import org.springframework.social.connect.support.OAuth2ConnectionFactory;
 
-import com.georges.social.qq.api.QQ;
+import com.lixiaocong.social.qq.api.QQ;
 
 /**
  * @author alexzuo

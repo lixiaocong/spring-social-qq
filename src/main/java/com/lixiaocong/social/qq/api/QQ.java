@@ -1,11 +1,9 @@
 /**
  * 
  */
-package com.georges.social.qq.api;
+package com.lixiaocong.social.qq.api;
 
 import org.springframework.social.ApiBinding;
-
-import com.georges.social.qq.api.UserOperations;
 
 /**
  * @author alexzuo

@@ -1,9 +1,10 @@
-package com.georges.social.qq.api.impl.json;
+package com.lixiaocong.social.qq.api.impl.json;
 
-import org.codehaus.jackson.Version;
-import org.codehaus.jackson.map.module.SimpleModule;
+import com.fasterxml.jackson.core.Version;
+import com.fasterxml.jackson.databind.Module;
 
-import com.georges.social.qq.api.QQProfile;
+import com.fasterxml.jackson.databind.module.SimpleModule;
+import com.lixiaocong.social.qq.api.QQProfile;
 
 public class QQModule extends SimpleModule {
 
@@ -15,7 +16,7 @@ public class QQModule extends SimpleModule {
 	 * @see org.codehaus.jackson.map.module.SimpleModule#setupModule(org.codehaus.jackson.map.Module.SetupContext)
 	 */
 	@Override
-	public void setupModule(SetupContext context) {
+	public void setupModule(Module.SetupContext context) {
 		context.setMixInAnnotations(QQProfile.class, QQProfileMixin.class);
 	}
 
